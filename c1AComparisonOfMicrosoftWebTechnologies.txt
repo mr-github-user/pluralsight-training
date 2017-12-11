@@ -1,0 +1,96 @@
+Web Tech Overview
+
+Http Requests
+ServerSide Processing - Code executed on the server to generate the response
+Http Responses
+Sent back from the server
+
+Http Requests are async
+
+Microsoft Web Platform
+
+Asp.NET
+
+Services:
+WebAPI 
+SignalR
+
+Site Dev:
+WebForms 
+WebPages
+MVC
+
+
+ASP.Net Core:
+Services:
+Web Api
+SignalR
+
+Sites:
+Web Pages 
+MVC
+
+How do Web Forms WebPages and MVC run?
+How is ASP.Net Core different?
+
+Sizing dev env: 
+Visual studio change settings 
+Code change settings in settings.json
+
+Web Forms:
+
+Create Sites using drag and drop, event driven dev.
+Web Forms are a little older
+
+Pre complilation or dynamic compilation
+Processing:
+HttpRequest: page is requested http:// blah.asp
+HttpModules => HttpHandler => HttpModules
+
+.aspx : pages that can be requested by the user // there is a design and code view
+Inherits: shows the code that will be executed when the page is loaded
+
+Uses designer view, css is also used
+
+Site.Master is like a base layout
+
+global.asax allows dev to add code to the pipeline
+
+Web Pages:
+Asp.NET Web pages uses the Razor syntax
+Uses Dynamic Compilation
+Http Pipeline
+http:page.cshtml -> httpModules => httpHandler -> httpModules -> http Response
+
+SiteLayout similar to site.Master
+themeing is managed using css
+
+interesting way to check data:
+@if (IsPost) {<text>@Request.Form["UserData"]</text>}
+
+
+MVC:
+Seperation of concerns, pattern based way to build sites
+Emphasis on seperate of concerns
+
+Model = data
+View = user-interface
+Controller = processing
+
+mature product, with continued investment
+
+HttpRequest -> default controller -> default action ->
+HttpModules -> MvCHttpHandler -> httpModules
+
+ASP.Net core:
+Lean framwork for building web and cloud applications, is fully open source, it is it's own framwork
+
+cross platform dev
+host on IIS or own process
+Open source and community supported
+heavy microsoft investment
+
+HttpPipeline:
+startup.cs -> everything is configured here
+no modules or handlers?
+
